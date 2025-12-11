@@ -173,7 +173,7 @@ Z_INTERNAL block_state deflate_medium(deflate_state *s, int flush) {
     memset(&next_match, 0, sizeof(struct match));
 
     for (;;) {
-        Pos hash_head = 0;    /* head of the hash chain */
+        uint32_t hash_head = 0;    /* head of the hash chain */
         int bflush = 0;       /* set if current block must be flushed */
         int64_t dist;
 
