@@ -20,7 +20,7 @@ extern "C" {
 #define MAX_WSIZE 32768
 #define TEST_WINDOW_SIZE (MAX_WSIZE * 2)
 
-typedef Pos (* quick_insert_string_cb)(deflate_state *const s, uint32_t str);
+typedef uint32_t (* quick_insert_string_cb)(deflate_state *const s, uint32_t str);
 
 // Base class with common setup/teardown for both insert_string benchmarks
 class insert_string_base: public benchmark::Fixture {
